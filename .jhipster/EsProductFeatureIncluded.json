@@ -1,0 +1,34 @@
+{
+    "name": "EsProductFeatureIncluded",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "caveat",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "highlighted",
+            "fieldType": "Boolean"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "products",
+            "otherEntityName": "esProduct",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20180625104711",
+    "entityTableName": "es_product_feature_included",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

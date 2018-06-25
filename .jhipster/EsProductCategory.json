@@ -1,0 +1,40 @@
+{
+    "name": "EsProductCategory",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "termsAndConditionsUrl",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "defaultProductId",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "products",
+            "otherEntityName": "esProduct",
+            "otherEntityRelationshipName": "productCategory"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "categoryGroup",
+            "otherEntityName": "esProductCategoryGroup",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20180625104709",
+    "entityTableName": "es_product_category",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

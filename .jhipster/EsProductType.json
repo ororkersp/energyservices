@@ -1,0 +1,21 @@
+{
+    "name": "EsProductType",
+    "fields": [],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "categoryGroups",
+            "otherEntityName": "esProductCategoryGroup",
+            "otherEntityRelationshipName": "productType"
+        }
+    ],
+    "changelogDate": "20180625104707",
+    "entityTableName": "es_product_type",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
