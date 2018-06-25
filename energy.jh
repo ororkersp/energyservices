@@ -1,0 +1,45 @@
+entity EsProductType {
+        id String
+}
+entity EsProductCategoryGroup {
+        id String
+}
+relationship OneToMany {
+ EsProductType{categoryGroups} to EsProductCategoryGroup{productType}
+}
+entity EsProductCategory {
+        id String,
+       name String,
+       termsAndConditionsUrl String,
+       defaultProductId String
+}
+relationship OneToMany {
+ EsProductCategoryGroup{productCategories} to EsProductCategory{categoryGroup}
+}
+entity EsProduct {
+        id String,
+       name String,
+       excessCharge BigDecimal,
+       priceMonthly BigDecimal,
+       priceYearly BigDecimal,
+       introPriceMonthly BigDecimal,
+       introMonths Integer,
+       defaultTariff Boolean
+}
+relationship OneToMany {
+ EsProductCategory{products} to EsProduct{productCategory}
+}
+entity EsProductFeatureIncluded {
+        id String,
+       name String,
+        caveat String,
+       highlighted Boolean
+}
+entity EsProductFeatureExcluded {
+        id String,
+       name String
+}
+relationship OneToMany {
+ EsProduct{featuresIncluded} to EsProductFeatureIncluded{products}
+ EsProduct{featuresExcluded} to EsProductFeatureExcluded{products}
+}
